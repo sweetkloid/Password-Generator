@@ -1,6 +1,6 @@
 
 
-var characterLength=8;s
+var characterLength=8; //this identifies the character we need the user to use
 
 var choiceArr=[];//This is the container for the generator answer
 
@@ -19,7 +19,7 @@ function getPrompts(){ //the beging of the prompts the user will choice from to 
   
   if(isNaN(characterLength)|| characterLength<8|| characterLength>128){ //this makes sure the user is giving the correct number between 8-128
     alert("Please enter a number between 8-128.");
-    return false; //if a number is not inserted
+    return false; //if a number is not inserted correctly
   }
 
   if (confirm("Would you like to add lowercase letters?")){ //the next promts are a yes/true (ok) or no/false (cancel) question
@@ -34,7 +34,7 @@ function getPrompts(){ //the beging of the prompts the user will choice from to 
   if (confirm("Would you like to add numbers?")){
     choiceArr = choiceArr.concat(numbers);
   }
-return true;
+return true; //all values have been choosen by user
 }
 
 generateBtn.addEventListener("click", writePassword); //when the user "clicks" the following will happen
